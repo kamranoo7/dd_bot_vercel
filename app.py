@@ -1,4 +1,4 @@
-import base64
+
 import requests
 from googleapiclient.http import MediaIoBaseDownload, MediaFileUpload
 from flask import request, jsonify
@@ -2000,7 +2000,7 @@ def convert_pdf2img(input_file, output_dir="eximages"):
         output_files.append(output_file)
     pdfIn.close()
     return output_files
-
+import base64
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
