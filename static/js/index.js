@@ -233,61 +233,7 @@ function stopAnimation() {
 
 let stream = null;
 
-// async function toggleRecording() {
-//   const fast = fastBtn.checked || false;
-//   const slow = slowBtn.checked || false;
-//   const groq = groqBtn.checked || false;
-//   if (audio) {
-//     audio.pause();
-//   }
-//   playSoundEffect(voiceSound);
-//   if (mediaRecorder && mediaRecorder.state === "recording") {
-//     mediaRecorder.stop();
-//     stopAnimation();
-//     playSoundEffect(msgsound);
-//     setTimeout(() => {
-//       appendMessage(transUser, PERSON_IMG, "right", `${svg}`);
-//     }, 700);
 
-//     setTimeout(() => {
-//       appendMessage(transJobBot, BOT_IMG, "left", loading);
-//     }, 1500);
-
-//     mediaRecorder.addEventListener("stop", () => {
-//       getLevelResponse(
-//         "level1",
-//         "this is a test query",
-//         fast,
-//         slow,
-//         groq,
-//         "english"
-//       );
-//       // getLevelResponse("level1", "this is a test query", fast, "english");
-//       // getLevelResponse("level1", query, fast, leng);
-
-//       const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
-//       const audioUrl = URL.createObjectURL(audioBlob);
-
-//       // Stop each track in the stream
-//       if (stream) {
-//         stream.getTracks().forEach((track) => track.stop());
-//         playSoundEffect(voiceSound);
-//         stream = null;
-//       }
-//     });
-//   } else {
-//     navigator.mediaDevices.getUserMedia({ audio: true }).then((str) => {
-//       stream = str; // Store the stream
-//       mediaRecorder = new MediaRecorder(stream);
-//       mediaRecorder.start();
-//       startAnimation();
-
-//       mediaRecorder.addEventListener("dataavailable", (event) => {
-//         audioChunks.push(event.data);
-//       });
-//     });
-//   }
-// }
 async function toggleRecording() {
   const fast = fastBtn.checked || false;
   const slow = slowBtn.checked || false;
